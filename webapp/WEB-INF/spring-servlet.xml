@@ -17,6 +17,12 @@
 	<context:annotation-config />
 	<context:component-scan base-package="com.example.fileupload" />
 
+
+	<!-- resource mapping -->
+	<mvc:resources location="file:/uploads/" mapping="/uploads/images/**" />
+
+
+
 	<!-- 뷰 리졸버 (bean 설정) -->
 	<bean id="viewResolver"
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
@@ -39,9 +45,5 @@
 
 		<!-- defaultEncoding -->
 		<property name="defaultEncoding" value="utf-8" />
-
 	</bean>
-
-
-
 </beans>
